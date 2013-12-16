@@ -1,4 +1,4 @@
-title simple timer
+title simple saw
 runfor 1000
 
 ctr auto 1 do{reset,saw} = ctr + 1
