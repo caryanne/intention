@@ -27,12 +27,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Intention</a>
+          <a class="navbar-brand" href="index.html">Intention</a>
+
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Interpreter</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="intention.html">Interpreter</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Register</a></li>
@@ -42,16 +43,45 @@
         </div>
       </div>
 
-      <div class="jumbotron">
-        <h1>Home</h1>
-        <p>Intention is a web-based simulation/math engine.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="#" role="button">Try it out!</a>
-        </p>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Input</h3>
+        </div>
+        <div class="panel-body">
+          <textarea class="form-control" rows="12">title simple saw
+runfor 1000
+
+define ctr every 1 do reset do saw = ctr + 1
+define reset = 1 if ctr == 30 else 0
+define saw export = saw + 1 if reset == 0 else 1</textarea>
+        </div>
       </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Control</h3>
+        </div>
+        <div class="panel-body">
+          <button type="button" data-loading-text="Running..." class="btn btn-default">
+            Run Program
+          </button>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Output</h3>
+        </div>
+        <div class="panel-body">
+          <div id="chart_div" style="width: 900px; height: 500px;"></div>
+        </div>
+      </div>
+
 
     </div>
     <script src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="main.js"></script>
 
