@@ -48,7 +48,7 @@
           <h3 class="panel-title">Input</h3>
         </div>
         <div class="panel-body">
-          <textarea class="form-control" id="code-box" rows="12">title simple saw
+          <textarea class="form-control code" id="code-box" rows="12">title simple saw
 runfor 1000
 
 define ctr every 1 do reset do saw = ctr + 1
@@ -71,12 +71,22 @@ define saw export = saw + 1 if reset == 0 else 1</textarea>
 
       <div class="panel panel-default">
         <div class="panel-heading">
+          <h3 class="panel-title">Log</h3>
+        </div>
+        <div class="panel-body">
+          <textarea class="form-control code" id="log-box" rows="4"></textarea>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
           <h3 class="panel-title">Output</h3>
         </div>
         <div class="panel-body">
           <div id="chart_div" style="width: 900px; height: 500px;"></div>
         </div>
       </div>
+
 
 
     </div>
