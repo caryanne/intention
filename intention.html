@@ -48,7 +48,7 @@
           <h3 class="panel-title">Input</h3>
         </div>
         <div class="panel-body">
-          <textarea class="form-control" rows="12">title simple saw
+          <textarea class="form-control" id="code-box" rows="12">title simple saw
 runfor 1000
 
 define ctr every 1 do reset do saw = ctr + 1
@@ -62,7 +62,7 @@ define saw export = saw + 1 if reset == 0 else 1</textarea>
           <h3 class="panel-title">Control</h3>
         </div>
         <div class="panel-body">
-          <button type="button" data-loading-text="Running..." class="btn btn-default">
+          <button type="button" data-loading-text="Running..." class="btn btn-default" id="run-btn">
             Run Program
           </button>
         </div>
