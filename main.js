@@ -2,6 +2,18 @@ google.load("visualization", "1", {packages:["corechart"]});
 
 $('.btn').button()
 
+/*function Apple (type) {
+    this.type = type;
+    this.color = "red";
+    this.getInfo = function() {
+        return this.color + ' ' + this.type + ' apple';
+    };
+}
+
+var apple = new Apple('macintosh');
+apple.color = "reddish";
+alert(apple.getInfo());*/
+
 window.onload = function() {}
 
 function drawChart() {
@@ -34,7 +46,7 @@ function loadProgram() {
     var lines = prog.split("\n");
     lines = lines.filter(function(n){return n});
     $('#log-box').val(lines);
-    
+
 
 }
 
