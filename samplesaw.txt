@@ -1,6 +1,6 @@
 title simple saw
 runfor 1000
 
-define ctr every 1 do reset do saw = ctr + 1
-define reset = 1 if ctr == 30 else 0
-define saw export = saw + 1 if reset == 0 else 1
+define ctr every 1 do reset do saw is ctr + 1
+define reset is 1 if ctr == 30 else 0
+define saw export is saw + 1 if reset == 0 else 1

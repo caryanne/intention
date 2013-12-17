@@ -14,6 +14,15 @@ var apple = new Apple('macintosh');
 apple.color = "reddish";
 alert(apple.getInfo());*/
 
+function Variable() {
+    this.start = 0;
+    this.stop = 0;
+    this.every = 0;
+    this.function = "";
+    this.
+}
+
+
 window.onload = function() {}
 
 function drawChart() {
