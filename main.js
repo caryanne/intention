@@ -10,6 +10,7 @@ var runfor = 0;
 
 var variables = {};
 var output;
+var options = {};
 
 window.onload = function() {
 
@@ -36,11 +37,8 @@ function log(entry) {
 }
 
 function drawChart() {
-  var data = google.visualization.arrayToDataTable([
-    ['Year', 'Sales', 'Expenses'],['2004',  1000,      400],['2005',  1170,      460]
-  ]);
 
-  var options = {};
+
 
   var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
   chart.draw(output, options);
@@ -107,7 +105,7 @@ function loadProgram() {
     for(var l = 0; l < lines.length; l++) {
         loadLine(lines[l]);
     }
-    log("title is " + title);
+    options.title = title;
     log("run for " + runfor);
 }
 
