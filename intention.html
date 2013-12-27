@@ -48,12 +48,14 @@
           <h3 class="panel-title">Input</h3>
         </div>
         <div class="panel-body">
-          <textarea class="form-control code" id="code-box" rows="12" spellcheck="false">title simplesaw
-runfor 1000
+          <textarea class="form-control code" id="code-box" rows="12" spellcheck="false">title simpledemo
+runfor 30
 
 define ctr every 1 do reset do saw is ctr + 1
-define reset is ctr % 50 == 0 ? 1 : 0
-export saw is reset == 0 ? saw + 1 : 1</textarea>
+define reset is ctr % 10 == 0 ? 1 : 0
+export saw is reset == 0 ? saw + 1 : 1
+export sin every 2 is 5 + 5 * Math.sin(ctr/3.0)
+export cos every 1 start 15 is 4 + 4 * Math.cos(ctr/1.0)</textarea>
         </div>
       </div>
 
