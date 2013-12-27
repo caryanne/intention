@@ -48,12 +48,12 @@
           <h3 class="panel-title">Input</h3>
         </div>
         <div class="panel-body">
-          <textarea class="form-control code" id="code-box" rows="12">title simplesaw
+          <textarea class="form-control code" id="code-box" rows="12" spellcheck="false">title simplesaw
 runfor 1000
 
 define ctr every 1 do reset do saw is ctr + 1
-define reset is 1 if ctr == 30 else 0
-define saw export is saw + 1 if reset == 0 else 1</textarea>
+define reset is ctr % 50 == 0 ? 1 : 0
+export saw is reset == 0 ? saw + 1 : 1</textarea>
         </div>
       </div>
 
@@ -67,14 +67,12 @@ define saw export is saw + 1 if reset == 0 else 1</textarea>
           </button>
         </div>
       </div>
-
-
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">Log</h3>
         </div>
         <div class="panel-body">
-          <textarea class="form-control code" id="log-box" rows="4"></textarea>
+          <textarea class="form-control code" id="log-box" rows="4" spellcheck="false">intention version</textarea>
         </div>
       </div>
 
@@ -91,7 +89,7 @@ define saw export is saw + 1 if reset == 0 else 1</textarea>
 
     </div>
     <script src="js/jquery-2.0.3.min.js"></script>
-    <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>--!>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="main.js"></script>
 
