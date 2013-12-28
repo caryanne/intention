@@ -128,7 +128,6 @@ function loadProgram() {
         loadLine(lines[l]);
     }
     options.title = title;
-    log("run for " + runfor);
 }
 
 var runProgram = function() {
