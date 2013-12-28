@@ -1,0 +1,30 @@
+title money
+runfor 60
+
+define day init 0 every 1 is day + 1
+
+export money init 1500 is money + income + expense
+
+
+define getmoney every 1 do paycheck is 0
+
+define paycheck do gifts is (day % 15 == 0) ? ((var1-50)/50) * 400 + 800 : 0
+define gifts do income is 0
+
+export income is paycheck + gifts
+
+
+define spendmoney every 1 do cigarettes is 0
+
+define cigarettes do gas is (day % 2 == 0) ? 7 : 0
+define gas do rent is (day % 7 == 0) ? 29 : 0
+define rent do cable is ((day + 25) % 30 == 0) ? 709 : 0
+define cable do expense is ((day + 12) % 30 == 0) ? 110 : 0
+define carpayment do cellphone is ((day + 2) % 30 == 0) ? 263 : 0
+define cellphone do loans is ((day + 2) % 30 == 0) ? 103 : 0
+define loans do insurance is ((day + 21) % 30 == 0) ? (50+66+159) : 0
+define insurance do services is ((day + 0) % 30 == 0) ? 122 : 0 
+define services do expense is ((day + 15) % 30 == 0) ? 40 : 0
+
+export expense do money is 0 - cigarettes - gas - rent - cable - carpayment - cellphone - loans - insurance - services
+

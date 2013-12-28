@@ -1,0 +1,6 @@
+title saw
+runfor 100
+
+define ctr every 1 do reset do saw is ctr + 1
+define reset is ctr % 30 == 0 ? 1 : 0
+export saw is reset == 0 ? saw + 1 : 1
