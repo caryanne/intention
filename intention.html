@@ -54,8 +54,8 @@
 runfor 60
 
 define ctr every 1 do esin is ctr + 1
-define esin do ecos is 5 + 5 * Math.sin(ctr/3.0)
-define ecos do avg1 is 5 + 3 * Math.cos(ctr/2.0)
+export esin do ecos is 5 + 5 * Math.sin(ctr/((var1/100)*5))
+export ecos do avg1 is 5 + (var2/100) * 10 * Math.cos(ctr/2.0)
 define avg1 do avg2 do avg3 is (esin + ecos)/ 2.0
 export avg2 is (esin + avg1)/ 2.0
 export avg3 is (ecos + avg1)/ 2.0</textarea>
@@ -71,13 +71,13 @@ export avg3 is (ecos + avg1)/ 2.0</textarea>
             Run Program
           </button>
 var1
-<input type="text" id="var1" class="span2" value="" data-slider-min="1" data-slider-max="50" data-slider-step="1" data-slider-value="25" data-slider-orientation="vertical" data-slider-selection="after">
+<input type="text" id="var1" class="span2" value="" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="25" data-slider-orientation="vertical" data-slider-selection="after">
 var2
-<input type="text" id="var2" class="span2" value="" data-slider-min="1" data-slider-max="50" data-slider-step="1" data-slider-value="25" data-slider-orientation="vertical" data-slider-selection="after">
+<input type="text" id="var2" class="span2" value="" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="25" data-slider-orientation="vertical" data-slider-selection="after">
 var3
-<input type="text" id="var3" class="span2" value="" data-slider-min="1" data-slider-max="50" data-slider-step="1" data-slider-value="25" data-slider-orientation="vertical" data-slider-selection="after">
+<input type="text" id="var3" class="span2" value="" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="25" data-slider-orientation="vertical" data-slider-selection="after">
 var4
-<input type="text" id="var4" class="span2" value="" data-slider-min="1" data-slider-max="50" data-slider-step="1" data-slider-value="25" data-slider-orientation="vertical" data-slider-selection="after">
+<input type="text" id="var4" class="span2" value="" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="25" data-slider-orientation="vertical" data-slider-selection="after">
 
 
         </div>

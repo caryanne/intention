@@ -12,9 +12,10 @@ var variables = {};
 var output;
 var options = {};
 
-
-
-
+intent.var1 = 25;
+intent.var2 = 25;
+intent.var3 = 25;
+intent.var4 = 25;
 
 $('#var1').slider();
 $('#var1').on('slide', function (ev) {
@@ -32,14 +33,6 @@ $('#var4').slider();
 $('#var4').on('slide', function (ev) {
     intent.var4 = ev.value;
 });
-
-
-
-
-
-
-
-
 
 window.onload = function() {
 
