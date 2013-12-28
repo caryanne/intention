@@ -1,5 +1,5 @@
 (function(intent) {
-google.load("visualization", "1", {packages:["corechart"]});
+google.load("visualization", "1", {packages:["imagelinechart"]});
 
 $('.btn').button();
 
@@ -37,11 +37,11 @@ function log(entry) {
 }
 
 function drawChart() {
-
-
-
-  var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-  chart.draw(output, options);
+  options.width = 800;
+  options.height = 400;
+  options.colors = [];
+  options.showCategoryLabels = false;
+  new google.visualization.ImageLineChart(document.getElementById('chart_div')).draw(output, options);
 }
 
 function clearProgram() {
@@ -112,14 +112,13 @@ function loadProgram() {
 var runProgram = function() {
   keys = Object.keys(variables);
   
-  output.addColumn('number', 'cycle');
+  //output.addColumn('number', 'cycle');
   for(var y = 0; y < keys.length; y++) {
     if(variables[keys[y]].exp == true)
       output.addColumn('number', keys[y]);
   }
 
   for(var x = 0; x < runfor; x++) {
-    setTimeout(runProgram, 5);
      for(var y = 0; y < keys.length; y++) {
       
       var at = variables[keys[y]].at;
@@ -137,7 +136,7 @@ var runProgram = function() {
         updateVariable(keys[y]);
       }
     }
-    var row = [x];
+    var row = [];
 
     for(var y = 0; y < keys.length; y++) {
       if(variables[keys[y]].exp == true)

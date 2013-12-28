@@ -49,14 +49,15 @@
           <h3 class="panel-title">Input</h3>
         </div>
         <div class="panel-body">
-          <textarea class="form-control code" id="code-box" rows="12" spellcheck="false">title simpledemo
-runfor 30
+          <textarea class="form-control code" id="code-box" rows="12" spellcheck="false">title waves
+runfor 60
 
-define ctr every 1 do reset do saw is ctr + 1
-define reset is ctr % 10 == 0 ? 1 : 0
-export saw is reset == 0 ? saw + 1 : 1
-export sin every 2 is 5 + 5 * Math.sin(ctr/3.0)
-export cos every 1 start 15 is 4 + 4 * Math.cos(ctr/1.0)</textarea>
+define ctr every 1 do esin is ctr + 1
+define esin do ecos is 5 + 5 * Math.sin(ctr/3.0)
+define ecos do avg1 is 5 + 3 * Math.cos(ctr/2.0)
+define avg1 do avg2 do avg3 is (esin + ecos)/ 2.0
+export avg2 is (esin + avg1)/ 2.0
+export avg3 is (ecos + avg1)/ 2.0</textarea>
         </div>
       </div>
 
@@ -75,7 +76,7 @@ export cos every 1 start 15 is 4 + 4 * Math.cos(ctr/1.0)</textarea>
           <h3 class="panel-title">Output</h3>
         </div>
         <div class="panel-body">
-          <div id="chart_div" style="width: 900px; height: 500px;"></div>
+          <div id="chart_div"></div>
         </div>
       </div>
       <div class="panel panel-default">
