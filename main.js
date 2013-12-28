@@ -12,6 +12,35 @@ var variables = {};
 var output;
 var options = {};
 
+
+
+
+
+$('#var1').slider();
+$('#var1').on('slide', function (ev) {
+    intent.var1 = ev.value;
+});
+$('#var2').slider();
+$('#var2').on('slide', function (ev) {
+    intent.var2 = ev.value;
+});
+$('#var3').slider();
+$('#var3').on('slide', function (ev) {
+    intent.var3 = ev.value;
+});
+$('#var4').slider();
+$('#var4').on('slide', function (ev) {
+    intent.var4 = ev.value;
+});
+
+
+
+
+
+
+
+
+
 window.onload = function() {
 
 }

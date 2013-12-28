@@ -10,3 +10,8 @@
 	.code {
 		font-family: monospace;
 	}
+
+.slider.slider-vertical {
+  height: 110px;
+  width: 20px;
+}
