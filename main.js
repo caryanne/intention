@@ -109,7 +109,7 @@ function loadProgram() {
     log("run for " + runfor);
 }
 
-function runProgram() {
+var runProgram = function() {
   keys = Object.keys(variables);
   
   output.addColumn('number', 'cycle');
@@ -119,7 +119,9 @@ function runProgram() {
   }
 
   for(var x = 0; x < runfor; x++) {
+    
      for(var y = 0; y < keys.length; y++) {
+      setTimeout(runProgram, 5);
       var at = variables[keys[y]].at;
       var every = variables[keys[y]].every;
       var start = variables[keys[y]].start;
