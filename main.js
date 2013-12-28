@@ -119,9 +119,9 @@ var runProgram = function() {
   }
 
   for(var x = 0; x < runfor; x++) {
-    
+    setTimeout(runProgram, 5);
      for(var y = 0; y < keys.length; y++) {
-      setTimeout(runProgram, 5);
+      
       var at = variables[keys[y]].at;
       var every = variables[keys[y]].every;
       var start = variables[keys[y]].start;
